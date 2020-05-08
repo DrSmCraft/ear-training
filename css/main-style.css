@@ -1,0 +1,30 @@
+
+.btn {
+    outline: gray;
+
+}
+
+.btn:hover {
+    outline: coral;
+
+}
+
+#key-Cs, #key-Ds, #key-Fs, #key-Gs, #key-As {
+    color: white;
+    background: black;
+    width: 50px;
+    height: 100px;
+
+}
+
+#key-C, #key-D, #key-E, #key-F, #key-G, #key-A, #key-B {
+    color: black;
+    background: white;
+    width: 50px;
+    height: 150px;
+}
+
+body {
+    text-align: center;
+    background-color: lightgray;
+}
