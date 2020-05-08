@@ -3,109 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous">
+    </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
     <link href="css/main-style.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous">
-</script>
 
 <div class="container-fluid">
-
-    <section>
-        <div class="container-fluid" style="width: 75%">
-            <div class="row">
-
-                <div class="col-sm-1">
-                    <button class="btn" id="key-C">
-                        C
-                    </button>
-                </div>
-
-                <div class="col-sm-1">
-                    <button class="btn" id="key-Cs">
-                        C# / D♭
-                    </button>
-                </div>
+    <div class="row">
+        <p>
 
 
-                <div class="col-sm-1">
-                    <button class="btn " id="key-D">
-                        D
-                    </button>
-                </div>
 
 
-                <div class="col-sm-1">
-                    <button class="btn" id="key-Ds">
-                        D# / E♭
-                    </button>
-                </div>
-
-
-                <div class="col-sm-1">
-                    <button class="btn " id="key-E">
-                        E
-                    </button>
-                </div>
-
-                <div class="col-sm-1">
-                    <button class="btn " id="key-F">
-                        F
-                    </button>
-                </div>
-
-                <div class="col-sm-1">
-                    <button class="btn" id="key-Fs">
-                        F# / G♭
-                    </button>
-                </div>
-
-                <div class="col-sm-1">
-                    <button class="btn" id="key-G">
-                        G
-                    </button>
-                </div>
-
-                <div class="col-sm-1">
-                    <button class="btn" id="key-Gs">
-                        G# / A♭
-                    </button>
-                </div>
-
-                <div class="col-sm-1">
-                    <button class="btn " id="key-A">
-                        A
-                    </button>
-                </div>
-
-
-                <div class="col-sm-1">
-                    <button class="btn" id="key-As">
-                        A# / B♭
-                    </button>
-
-                </div>
-
-
-                <div class="col-sm-1">
-                    <button class="btn " id="key-B">
-                        B
-                    </button>
-                </div>
-
-
-            </div>
-            <script src="sound.js">
-            </script>
-
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <button class="btn btn-primary" id="random-note">
+                Random Note
+            </button>
         </div>
-    </section>
-</div>
+    </div>
+    <div class="h-divider">
 
+    </div>
+    <div class="row">
+        <div class="col-sm-1">
+            <button class="btn btn-primary" id="decrease-octave">
+                <
+            </button>
+        </div>
+
+        <div class="col-sm-10">
+            <section>
+                <div class="container-fluid" style="width: 75%">
+                    <div class="row">
+
+                        <div class="col-sm-1">
+                            <button class="btn" id="key-C">
+                                C
+                            </button>
+                        </div>
+
+                        <div class="col-sm-1">
+                            <button class="btn" id="key-Cs">
+                                C# / D♭
+                            </button>
+                        </div>
+
+
+                        <div class="col-sm-1">
+                            <button class="btn " id="key-D">
+                                D
+                            </button>
+                        </div>
+
+
+                        <div class="col-sm-1">
+                            <button class="btn" id="key-Ds">
+                                D# / E♭
+                            </button>
+                        </div>
+
+
+                        <div class="col-sm-1">
+                            <button class="btn " id="key-E">
+                                E
+                            </button>
+                        </div>
+
+                        <div class="col-sm-1">
+                            <button class="btn " id="key-F">
+                                F
+                            </button>
+                        </div>
+
+                        <div class="col-sm-1">
+                            <button class="btn" id="key-Fs">
+                                F# / G♭
+                            </button>
+                        </div>
+
+                        <div class="col-sm-1">
+                            <button class="btn" id="key-G">
+                                G
+                            </button>
+                        </div>
+
+                        <div class="col-sm-1">
+                            <button class="btn" id="key-Gs">
+                                G# / A♭
+                            </button>
+                        </div>
+
+                        <div class="col-sm-1">
+                            <button class="btn " id="key-A">
+                                A
+                            </button>
+                        </div>
+
+
+                        <div class="col-sm-1">
+                            <button class="btn" id="key-As">
+                                A# / B♭
+                            </button>
+
+                        </div>
+
+
+                        <div class="col-sm-1">
+                            <button class="btn " id="key-B">
+                                B
+                            </button>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </section>
+        </div>
+        <div class="col-sm-1">
+            <button class="btn btn-primary" id="increase-octave">
+                >
+            </button>
+        </div>
+    </div>
+    <div class="h-divider">
+
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 id="octave-label">
+                Octave: 4
+            </h2>
+        </div>
+    </div>
+
+
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="wave-dropdown">
+            Wave Function
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <button class="dropdown-item" id="wave-sine">Sine</button>
+            <button class="dropdown-item" id="wave-square">Square</button>
+            <button class="dropdown-item" id="wave-sawtooth">Sawtooth</button>
+            <button class="dropdown-item" id="wave-triangle">Triangle</button>
+        </div>
+    </div>
+
+</div>
+<script src="sound.js">
+</script>
 </body>
 </html>
