@@ -18,42 +18,103 @@ var duration = 500;
 var octave = 4;
 var waveMode = "sine";
 var reverbTime = 2;
+var currentNote = null;
 
 document.getElementById("key-C").addEventListener("click", function () {
-    playSound("C", octave)
+    playSound("C", octave);
+    if (currentNote === "C") {
+        currentNote = null;
+        document.getElementById("random-note").innerText = "Random Note";
+
+    }
 });
 document.getElementById("key-Cs").addEventListener("click", function () {
-    playSound("Cs", octave)
+    playSound("Cs", octave);
+    if (currentNote === "Cs") {
+        currentNote = null;
+        document.getElementById("random-note").innerText = "Random Note";
+
+    }
 });
 document.getElementById("key-D").addEventListener("click", function () {
-    playSound("D", octave)
+    playSound("D", octave);
+    if (currentNote === "D") {
+        currentNote = null;
+        document.getElementById("random-note").innerText = "Random Note";
+
+    }
 });
 document.getElementById("key-Ds").addEventListener("click", function () {
-    playSound("Ds", octave)
+    playSound("Ds", octave);
+    if (currentNote === "Ds") {
+        currentNote = null;
+        document.getElementById("random-note").innerText = "Random Note";
+
+    }
 });
 document.getElementById("key-E").addEventListener("click", function () {
-    playSound("E", octave)
+    playSound("E", octave);
+    if (currentNote === "E") {
+        currentNote = null;
+        document.getElementById("random-note").innerText = "Random Note";
+
+    }
 });
 document.getElementById("key-F").addEventListener("click", function () {
-    playSound("F", octave)
+    playSound("F", octave);
+    if (currentNote === "F") {
+        currentNote = null;
+        document.getElementById("random-note").innerText = "Random Note";
+
+    }
 });
 document.getElementById("key-Fs").addEventListener("click", function () {
-    playSound("Fs", octave)
+    playSound("Fs", octave);
+    if (currentNote === "Fs") {
+        currentNote = null;
+        document.getElementById("random-note").innerText = "Random Note";
+
+    }
 });
 document.getElementById("key-G").addEventListener("click", function () {
-    playSound("G", octave)
+    playSound("G", octave);
+    if (currentNote === "G") {
+        currentNote = null;
+        document.getElementById("random-note").innerText = "Random Note";
+
+    }
 });
 document.getElementById("key-Gs").addEventListener("click", function () {
-    playSound("Gs", octave)
+    playSound("Gs", octave);
+    if (currentNote === "Gs") {
+        currentNote = null;
+        document.getElementById("random-note").innerText = "Random Note";
+
+    }
 });
 document.getElementById("key-A").addEventListener("click", function () {
-    playSound("A", octave)
+    playSound("A", octave);
+    if (currentNote === "A") {
+        currentNote = null;
+        document.getElementById("random-note").innerText = "Random Note";
+
+    }
 });
 document.getElementById("key-As").addEventListener("click", function () {
-    playSound("As", octave)
+    playSound("As", octave);
+    if (currentNote === "As") {
+        currentNote = null;
+        document.getElementById("random-note").innerText = "Random Note";
+
+    }
 });
 document.getElementById("key-B").addEventListener("click", function () {
-    playSound("B", octave)
+    playSound("B", octave);
+    if (currentNote === "B") {
+        currentNote = null;
+        document.getElementById("random-note").innerText = "Random Note";
+
+    }
 });
 document.getElementById("decrease-octave").addEventListener("click", function () {
     octave--;
@@ -90,8 +151,13 @@ document.getElementById("wave-triangle").addEventListener("click", function () {
 
 document.getElementById("random-note").addEventListener("click", function () {
     var notes = Array("C", "Cs", "D", "Ds", "E", "F", "G", "Gs", "A", "As", "B");
+    var randomNote = notes[Math.floor(Math.random() * notes.length)];
+    if (currentNote == null) {
+        currentNote = randomNote;
+        document.getElementById("random-note").innerText = "Replay";
+    }
 
-    playSound(notes[Math.floor(Math.random() * notes.length)]);
+    playSound(currentNote, octave);
 });
 
 function checkOctaveBounds() {
@@ -107,13 +173,13 @@ function playSound(note, octave = 4) {
     var oscillator = audioCtx.createOscillator();
     oscillator.type = waveMode;
     oscillator.frequency.value = noteFreqDefinitions[note] * Math.pow(2, octave); // value in hertz
-    var  gain = audioCtx.createGain();
+    var gain = audioCtx.createGain();
     gain.gain.value = 1;
     oscillator.connect(gain);
     gain.gain.exponentialRampToValueAtTime(
         0.00001, audioCtx.currentTime + reverbTime
-    )
-    gain.connect(audioCtx.destination)
+    );
+    gain.connect(audioCtx.destination);
 
     oscillator.start(0);
 
