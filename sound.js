@@ -19,6 +19,7 @@ var octave = 4;
 var waveMode = "sine";
 var reverbTime = 2;
 var currentNote = null;
+var volume = 0.5;
 
 document.getElementById("key-C").addEventListener("click", function () {
     playSound("C", octave);
@@ -160,6 +161,11 @@ document.getElementById("random-note").addEventListener("click", function () {
     playSound(currentNote, octave);
 });
 
+
+document.getElementById("volume-slider").addEventListener("change", function () {
+    volume = document.getElementById("volume-slider").value / 100.0;
+});
+
 function checkOctaveBounds() {
     if (octave < 1) {
         octave = 1;
@@ -174,7 +180,7 @@ function playSound(note, octave = 4) {
     oscillator.type = waveMode;
     oscillator.frequency.value = noteFreqDefinitions[note] * Math.pow(2, octave); // value in hertz
     var gain = audioCtx.createGain();
-    gain.gain.value = 1;
+    gain.gain.value = volume;
     oscillator.connect(gain);
     gain.gain.exponentialRampToValueAtTime(
         0.00001, audioCtx.currentTime + reverbTime
