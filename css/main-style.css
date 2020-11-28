@@ -9,24 +9,42 @@
 
 }
 
+.padding-0{
+    padding-right:0;
+    padding-left:0;
+}
 #key-Cs, #key-Ds, #key-Fs, #key-Gs, #key-As {
     color: white;
     background: black;
     width: 50px;
     height: 100px;
-
+    border-color: gray;
+    border-width: 2px;
 }
+
+#key-Cs:hover, #key-Ds:hover, #key-Fs:hover, #key-Gs:hover, #key-As:hover {
+    color: white;
+    background: #4b4b4b;
+}
+
 
 #key-C, #key-D, #key-E, #key-F, #key-G, #key-A, #key-B {
     color: black;
     background: white;
     width: 50px;
     height: 150px;
+    border-color: darkgray;
+    border-width: 3px;
+}
+
+#key-C:hover, #key-D:hover, #key-E:hover, #key-F:hover, #key-G:hover, #key-A:hover, #key-B:hover{
+    color: black;
+    background: #eeeeee;
 }
 
 body {
     text-align: center;
-    background-color: lightgray;
+    background-color: #ededed;
 }
 
 .h-divider{
@@ -35,5 +53,10 @@ body {
     height:2px;
     width:100%;
     border-top:2px solid gray;
+}
+h1 {
+    margin-top: 30px;
+
+    margin-bottom: 70px;
 }
 
